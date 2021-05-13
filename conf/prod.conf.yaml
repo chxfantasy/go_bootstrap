@@ -2,26 +2,23 @@ server:
   name: go_bootstrap
   env: debug    #debug, release, test
   port: 7003
-  log:
-    fileConfig:
-      appId: go_bootstrap
-      logFilePath: go_bootstrap
-      maxSize: 64
-      maxBackups: 3
-      maxAge: 1
-      console: true
-      compress: true
-      levelString:  debug        # -1 debug 0 info 1 warn 2 error 3 DPanicLevel 4 panic 5 fatal
-  traceLog:
-    fileConfig:
-      appId: go_bootstrap
-      logFilePath: trace/trace
-      maxSize: 64
-      maxBackups: 3
-      maxAge: 1
-      compress: true
-      console: true
-      levelString: debug         # -1 debug 0 info 1 warn 2 error 3 DPanicLevel 4 panic 5 fatal
+
+biz_log:
+  file_path: ./go_bootstrap
+  max_size: 64
+  max_backups: 3
+  max_age: 1
+  compress: true
+  console: true
+  level: debug         # -1 debug 0 info 1 warn 2 error 3 DPanicLevel 4 panic 5 fatal
+trace_log:
+  file_path: ./trace/trace
+  max_size: 64
+  max_backups: 3
+  max_age: 1
+  compress: true
+  console: true
+  level: debug         # -1 debug 0 info 1 warn 2 error 3 DPanicLevel 4 panic 5 fatal
 
 redis-1:
   addr: 127.0.0.1:6379
