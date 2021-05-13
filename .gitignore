@@ -1,0 +1,24 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/restdemo
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Editor
+.vscode
+
+# Debug
+debug
+.env
+*.log
+*.err
+.idea
+
+*.log
+trace
+main
